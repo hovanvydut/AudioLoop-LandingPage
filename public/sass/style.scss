@@ -1,0 +1,291 @@
+// color variable
+$first_color: #ffeadb;
+$second_color: #ff9a76;
+$third_color: #679b9b;
+$fourth_color: #637373;
+
+$body_text: 16px;
+$title_1_fontsize: 32px;
+$title_2_fontsize: 42px;
+$title_3_fontsize: 80px;
+
+$ExtraBold: 800;
+$SemiBold: 600;
+$Light: 300;
+$SemiBoldItalic: 600;
+$LightItalic: 300;
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    background-color: $first_color;
+}
+
+.header__container {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    height: 735px;
+    z-index: 1;
+
+    display: flow-root;
+    background-color: $fourth_color;
+    background-image: url('../images/background_1.png');
+
+    .header__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        background-color: #679b9b;
+        opacity: 0.3;
+    }
+
+    .header__audio-loop-block {
+        position: absolute;
+        width: calc((500 / 1366) * 100%);
+        height: calc((318 / 765) * 100%);
+        margin-left: calc((103 / 1366) * 100%);
+        margin-top: calc((186 / 1366) * 100%);
+        z-index: 3;
+
+        h1 {
+            color: white;
+            font-weight: $ExtraBold;
+            font-size: $title_3_fontsize;
+            font-family: Nutr;
+        }
+
+        p {
+            color: white;
+            font-weight: $SemiBold;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .header__button-container {
+            display: flex;
+            flex-wrap: wrap;
+
+            .header__download-btn {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: $second_color;
+                text-decoration: none;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+
+                width: calc((189 / 500) * 100%);
+                height: calc((68 / 318) * 100%);
+                margin-right: calc((30 / 500) * 100%);
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                    display: block;
+
+                    margin: 0 21px;
+                }
+                p {
+                    display: block;
+                    color: white;
+                    font-weight: $Light;
+                    font-size: 16px;
+
+                    span {
+                        font-weight: $SemiBold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dyk__container {
+    position: relative;
+    z-index: 1;
+    display: flow-root;
+
+    .dyk__circle-shape {
+        position: absolute;
+        z-index: 2;
+        width: 61px;
+        height: 61px;
+        left: 534px;
+        top: 97px;
+        border-radius: 50%;
+
+        background-color: $second_color;
+    }
+
+    .dyk__title {
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        color: black;
+        font-size: 42px;
+        font-weight: $SemiBold;
+        text-align: center;
+        margin-top: 110px;
+    }
+
+    .dyk__card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: calc(110px + 42px + 100px);
+        margin-bottom: 100px;
+
+        .dyk__card {
+            flex-basis: 20%;
+            padding: 0 50px;
+            text-align: center;
+
+            .dky__card-number {
+                color: $second_color;
+                font-size: 42px;
+            }
+
+            .dyk__card-text {
+                font-size: $body_text;
+                color: black;
+            }
+        }
+    }
+
+    .dyk__footer {
+        background-color: $second_color;
+        text-align: center;
+        padding: 47px 0;
+
+        .dyk__footertext {
+            color: white;
+            font-size: 20px;
+            font-style: italic;
+
+            strong,
+            b {
+                font-weight: $ExtraBold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header__container {
+        .header__overlay {
+        }
+
+        .header__audio-loop-block {
+            width: 70%;
+
+            h1 {
+            }
+
+            p {
+            }
+
+            .header__button-container {
+                .header__download-btn {
+                    width: auto;
+                    padding: 0px 15px;
+                    img {
+                        margin: 0px 10px 0px 0px;
+                    }
+                    p {
+                        span {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header__container {
+        .header__overlay {
+        }
+
+        .header__audio-loop-block {
+            width: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            padding: 20px;
+
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+            }
+
+            .header__button-container {
+                .header__download-btn {
+                    width: auto;
+                    padding: 0px 15px;
+                    img {
+                        margin: 0px 10px 0px 0px;
+                    }
+                    p {
+                        span {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__container {
+        max-width: 100%;
+        width: 100%;
+        height: 735px;
+        background-color: $fourth_color;
+
+        .header__overlay {
+        }
+
+        .header__audio-loop-block {
+            height: 100%;
+
+            h1 {
+                font-size: 50px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .header__button-container {
+                justify-content: space-around;
+                .header__download-btn {
+                    flex-basis: 45%;
+                    margin-right: 0;
+                    padding: 0 3px;
+
+                    img {
+                        margin: 0;
+                    }
+                    p {
+                        span {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
