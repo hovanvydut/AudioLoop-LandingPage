@@ -119,39 +119,46 @@ $LightItalic: 300;
     display: flow-root;
     background-color: white;
 
-    .dyk__circle-shape {
-        position: absolute;
-        z-index: 2;
-        width: 61px;
-        height: 61px;
-        left: 534px;
-        top: 97px;
-        border-radius: 50%;
+    .dyk__head {
+        display: flex;
+        justify-content: center;
 
-        background-color: $second_color;
-    }
+        .dyk__title {
+            position: relative;
+            z-index: -1;
 
-    .dyk__title {
-        position: absolute;
-        z-index: 3;
-        width: 100%;
-        color: black;
-        font-size: 42px;
-        font-weight: $SemiBold;
-        text-align: center;
-        margin-top: 110px;
+            display: inline-block;
+            color: black;
+            font-size: 42px;
+            font-weight: $SemiBold;
+            text-align: center;
+            margin-top: 110px;
+
+            .dyk__circle-shape {
+                position: absolute;
+                bottom: 0px;
+                left: -40px;
+                z-index: -10;
+
+                width: 61px;
+                height: 61px;
+                border-radius: 50%;
+
+                background-color: $second_color;
+            }
+        }
     }
 
     .dyk__card-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        margin-top: calc(110px + 42px + 100px);
-        margin-bottom: 100px;
+        justify-content: space-evenly;
+        margin: 100px;
 
         .dyk__card {
             flex-basis: 20%;
-            padding: 0 50px;
+            min-width: 170px;
+            margin-bottom: 30px;
             text-align: center;
 
             .dky__card-number {
@@ -191,39 +198,41 @@ $LightItalic: 300;
     background-color: white;
     padding-bottom: 25px;
 
-    .mf__circle-shape {
-        position: absolute;
-        z-index: 2;
-        width: 61px;
-        height: 61px;
-        left: 483px;
-        top: 158px;
-        border-radius: 50%;
+    .mf__head {
+        display: flex;
+        justify-content: center;
 
-        background-color: $second_color;
-    }
+        .mf__title {
+            position: relative;
+            z-index: 1;
 
-    .mf__title {
-        position: absolute;
-        z-index: 3;
-        width: 100%;
-        color: black;
-        font-size: 42px;
-        font-weight: $SemiBold;
-        text-align: center;
-        margin-top: 168px;
+            display: inline-block;
+            color: black;
+            font-size: 42px;
+            font-weight: $SemiBold;
+            text-align: center;
+            margin-top: 168px;
+
+            .mf__circle-shape {
+                position: absolute;
+                z-index: -10;
+                bottom: 0px;
+                left: -40px;
+                width: 61px;
+                height: 61px;
+                border-radius: 50%;
+
+                background-color: $second_color;
+            }
+        }
     }
 
     .mf__row {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
+        align-items: center;
         margin-top: 40px;
         padding: 0px 41px;
-
-        &--first {
-            margin-top: 275px;
-        }
 
         &:nth-of-type(odd) {
             flex-direction: row-reverse;
@@ -238,6 +247,7 @@ $LightItalic: 300;
 
         .mf__img {
             flex-basis: 50%;
+            min-width: 200px;
 
             .mf__img-container {
                 width: calc((547 / 645) * 100%);
@@ -289,41 +299,51 @@ $LightItalic: 300;
 .of__container {
     z-index: 1;
     display: flow-root;
-    background-color: white;
+    background-color: #fffbf7;
     position: relative;
     padding-bottom: 134px;
 
-    .of__circle-shape {
-        position: absolute;
-        z-index: 2;
-        width: 61px;
-        height: 61px;
-        left: 472px;
-        top: 68px;
-        border-radius: 50%;
+    .of__head {
+        display: flex;
+        justify-content: center;
 
-        background-color: $second_color;
-    }
+        .of__title {
+            position: relative;
+            z-index: 1;
+            z-index: 3;
 
-    .of__title {
-        position: absolute;
-        z-index: 3;
-        width: 100%;
-        color: black;
-        font-size: 42px;
-        font-weight: $SemiBold;
-        text-align: center;
-        margin-top: 89px;
+            display: inline-block;
+            color: black;
+            font-size: 42px;
+            font-weight: $SemiBold;
+            text-align: center;
+            margin-top: 89px;
+
+            .of__circle-shape {
+                position: absolute;
+                z-index: -10;
+                bottom: 0px;
+                left: -40px;
+
+                width: 61px;
+                height: 61px;
+                border-radius: 50%;
+
+                background-color: $second_color;
+            }
+        }
     }
 
     .of__card-container {
-        margin-top: calc(89px + 57px + 50px);
         display: flex;
         flex-wrap: wrap;
+        margin-top: 100px;
         justify-content: space-around;
 
         .of__card {
             flex-basis: 22%;
+            min-width: 300px;
+            margin-bottom: 30px;
             background: #ffffff;
             box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.08);
             border-radius: 7.5px;
@@ -357,12 +377,12 @@ $LightItalic: 300;
 .ba__container {
     background-image: url('../images/background_2.png');
     position: relative;
-    height: 516px;
+    height: 37vw;
 
     .ba__text-block {
         position: absolute;
-        top: 122px;
-        right: 105px;
+        top: calc(122 / 765 * 100%);
+        right: calc(105 / 1366 * 100%);
 
         .ba__title {
             color: white;
@@ -423,6 +443,7 @@ $LightItalic: 300;
 
         .me__card {
             flex-basis: 25%;
+            min-width: 248px;
             // max-width: calc((248 / 1366) * 100%);
             padding: 34px;
 
@@ -531,6 +552,7 @@ $LightItalic: 300;
             color: #333;
             font-size: 20px;
             font-weight: $SemiBold;
+            width: 70%;
         }
 
         .footer__trademark {
@@ -645,6 +667,12 @@ $LightItalic: 300;
             }
         }
     }
+
+    .survey-container {
+        .survey-button {
+            width: 50%;
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -680,14 +708,19 @@ $LightItalic: 300;
             }
         }
     }
+
+    .survey-container {
+        padding: 30px;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .header__container {
         max-width: 100%;
         width: 100%;
-        height: 735px;
+        height: 500px;
         background-color: $fourth_color;
+        background-position: center;
 
         .header__overlay {
         }
@@ -719,6 +752,174 @@ $LightItalic: 300;
                         span {
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .dyk__container {
+        .dyk__head {
+            .dyk__title {
+                .dyk__circle-shape {
+                }
+            }
+        }
+
+        .dyk__card-container {
+            .dyk__card {
+                .dky__card-number {
+                }
+
+                .dyk__card-text {
+                }
+            }
+        }
+
+        .dyk__footer {
+            .dyk__footertext {
+                font-size: 16px;
+                strong,
+                b {
+                }
+            }
+        }
+    }
+
+    .mf__container {
+        .mf__head {
+            .mf__title {
+                .mf__circle-shape {
+                }
+            }
+        }
+
+        .mf__row {
+            &:nth-of-type(odd) {
+                .mf__img {
+                    .mf__img-container {
+                        .mf__img-overlay {
+                        }
+                    }
+                }
+            }
+
+            .mf__img {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+                .mf__img-container {
+                    width: 100%;
+
+                    img {
+                    }
+
+                    .mf__img-overlay {
+                    }
+                }
+            }
+
+            .mf__text {
+                flex-basis: 100%;
+                text-align: center;
+
+                .mf__text-wrapper {
+                    width: 100%;
+                    .mf__feature-name {
+                        font-size: 28px;
+                    }
+
+                    .mf__feature-description {
+                    }
+                }
+            }
+        }
+    }
+
+    .ba__container {
+        background-image: url('../images/background_2.png');
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        height: 100vw;
+
+        .ba__text-block {
+            position: static;
+            width: 80%;
+            .ba__title {
+                color: white;
+                font-size: 24px;
+                font-weight: $ExtraBold;
+                margin-bottom: 14px;
+            }
+
+            .ba__description {
+                color: white;
+                font-size: 16px;
+                font-weight: $Light;
+            }
+        }
+    }
+
+    .me__container {
+        padding: 150px 10px;
+
+        .me__head {
+            .me__title {
+            }
+        }
+
+        .me__card-container {
+        }
+
+        .survey-container {
+            padding: 30px 0px;
+
+            .survey-description {
+            }
+
+            .survey-button {
+                width: 50%;
+            }
+        }
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        padding: 10px;
+
+        .footer__left {
+            width: 100%;
+
+            .footer__app-description {
+                width: 70%;
+            }
+        }
+
+        .footer__right {
+            width: 100%;
+
+            form {
+                div {
+                    margin-bottom: 30px;
+                }
+
+                .footer__form-col-1 {
+                    width: 100%;
+                    margin-bottom: 0px;
+
+                    input {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .footer__form-col-2 {
+                    width: 100%;
+                }
+
+                .footer__form-col-3 {
+                    width: 100%;
                 }
             }
         }
