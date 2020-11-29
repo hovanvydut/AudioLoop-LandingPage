@@ -30,8 +30,8 @@ $LightItalic: 300;
 .header__container {
     position: relative;
     max-width: 100%;
-    width: 100%;
-    height: 735px;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
 
     display: flow-root;
@@ -63,7 +63,7 @@ $LightItalic: 300;
             color: white;
             font-weight: $ExtraBold;
             font-size: $title_3_fontsize;
-            font-family: Nutr;
+            font-family: 'Nunito', Arial, Helvetica, sans-serif;
         }
 
         p {
@@ -153,7 +153,7 @@ $LightItalic: 300;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        margin: 100px;
+        margin: 50px 100px 100px 100px;
 
         .dyk__card {
             flex-basis: 20%;
@@ -238,9 +238,17 @@ $LightItalic: 300;
             flex-direction: row-reverse;
             .mf__img {
                 .mf__img-container {
+                    margin-left: auto;
+                    img {
+                    }
                     .mf__img-overlay {
                         transform: translate(-25px, 25px);
                     }
+                }
+            }
+            .mf__text {
+                .mf__text-wrapper {
+                    margin-left: auto;
                 }
             }
         }
