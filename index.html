@@ -17,7 +17,36 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- Loading -->
+    <div class="loader-container" id="loader">
+        <div class="loader-overlay"></div>
+        <div class="temp">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <div id="notify-popup" class="notify-popup notify-popup--hidden">
+        <div id="notify-popup-close" class="notify-popup-close">
+            <img src="public/icons/close.png" />
+        </div>
+
+        <div class="notify-popup-text">
+            <p>
+                Cảm ơn bạn đang quan tâm đến ứng dụng, Audio Loop hiện đang trong giai đoạn hoàn thiện để đến gần hơn
+                với người dùng. Đăng ký trải nghiệm thử để nhận thông báo khi sản phẩm hoàn thiện!
+            </p>
+        </div>
+
+        <div class="notify-popup-form">
+            <p>Đăng kí trải nghiệm thử</p>
+            <form action="">
+                <input type="email" placeholder="Email">
+                <button>Tham gia ngay</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="container" class="container">
         <!-- header namespace -->
         <div class="header__container">
             <div class="header__overlay"></div>
@@ -409,15 +438,15 @@
                 </div>
             </div>
 
-            <div class="survey-container">
+            <div id="khao-sat" class="survey-container">
                 <p class="survey-description">
                     Hiện tại chúng tôi vẫn đang trong giai đoạn phát triển, nếu bạn muốn góp ý <br /> thêm về tính năng,
                     hãy
                     giúp chúng tôi làm bài khảo sát dưới đây!
                 </p>
 
-                <a href="#" class="survey-button">
-                    Link Khảo Sát
+                <a id="survey-btn" href="javascript:void(0)" class="survey-button">
+                    Khảo sát ngay
                 </a>
             </div>
         </div>
@@ -433,8 +462,8 @@
                 </p>
 
                 <div class="footer__trademark">
-                    <p>* Một sản phẩm của &nbsp;&nbsp;</p>
-                    <img class="lazyload" data-src="public/images/sgroup.png" alt="sgroup">
+                    <!-- <p>* Một sản phẩm của &nbsp;&nbsp;</p> -->
+                    <img class="lazyload" data-src="public/images/badge-gradient-light.png" alt="sgroup">
                 </div>
             </div>
 
@@ -464,16 +493,22 @@
             </div>
 
         </div>
+    </div>
 
-        <div class="survery-emmbed">
-            <div class="surver-cover">
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdYuPEhbfvUGU_PLWDuglAvkM7IVzyH6O3bwolAym9I0B0bHg/viewform?embedded=true"
-                    width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
+    <div id="survey-embed" class="survey-embed survey-embed--hidden">
+        <div class="survey-cover">
+            <div id="survey-embed-close" class="survey-embed-close">
+                <img src="public/icons/close.png" />
             </div>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdYuPEhbfvUGU_PLWDuglAvkM7IVzyH6O3bwolAym9I0B0bHg/viewform?embedded=true"
+                width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
         </div>
+    </div>
+    <div id="survey-embed-cover" class="survey-embed-cover survey-embed-cover--hidden">
     </div>
 </body>
 <script src="public/js/lazysizes.min.js" async></script>
+<script src="public/js/main.js"></script>
 
 </html>
