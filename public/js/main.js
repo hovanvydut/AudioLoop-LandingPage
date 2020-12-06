@@ -54,3 +54,66 @@ document.onreadystatechange = function first() {
         // document.querySelector('body').style.visibility = 'visible';
     }
 };
+
+document
+    .getElementById('trial-register-form-btn')
+    .addEventListener('click', (event) => {
+        event.preventDefault();
+        const email = document.getElementById('trial-register-form-input')
+            .value;
+        if (email == '') {
+            alert('Vui lòng điền thông tin đầy đủ!');
+        } else
+            fetch('https://api.apispreadsheets.com/data/4677/', {
+                method: 'POST',
+                body: JSON.stringify({
+                    data: {
+                        email,
+                        time: new Date(),
+                    },
+                }),
+            }).then((res) => {
+                if (res.status === 201) {
+                    alert('Bạn đã đăng kí dùng thử thành công!');
+                    document.getElementById('trial-register-form-input').value =
+                        '';
+                } else {
+                    alert('Có lỗi xảy ra, vui lòng thử lại!');
+                }
+
+                document.getElementById('notify-popup-close').click();
+            });
+    });
+
+document
+    .getElementById('contact-form-btn')
+    .addEventListener('click', (event) => {
+        event.preventDefault();
+        const email = document.getElementById('contact-form-email').value;
+        const name = document.getElementById('contact-form-name').value;
+        const message = document.getElementById('contact-form-message').value;
+
+        if (email == '' || name == '' || message == '') {
+            alert('Vui lòng điền thông tin đầy đủ!');
+        } else
+            fetch('https://api.apispreadsheets.com/data/4684/', {
+                method: 'POST',
+                body: JSON.stringify({
+                    data: {
+                        email,
+                        name,
+                        message,
+                        time: new Date(),
+                    },
+                }),
+            }).then((res) => {
+                if (res.status === 201) {
+                    alert('Bạn đã đăng kí dùng thử thành công!');
+                    document.getElementById('contact-form-email').value = '';
+                    document.getElementById('contact-form-name').value = '';
+                    document.getElementById('contact-form-message').value = '';
+                } else {
+                    alert('Có lỗi xảy ra, vui lòng thử lại!');
+                }
+            });
+    });

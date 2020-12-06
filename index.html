@@ -39,9 +39,9 @@
 
         <div class="notify-popup-form">
             <p>Đăng kí trải nghiệm thử</p>
-            <form action="">
-                <input type="email" placeholder="Email">
-                <button>Tham gia ngay</button>
+            <form id="trial-register-form" action="">
+                <input id="trial-register-form-input" name="email" type="email" placeholder="Email">
+                <button id="trial-register-form-btn">Tham gia ngay</button>
             </form>
         </div>
     </div>
@@ -478,16 +478,17 @@
                     </p>
                 </div>
 
-                <form action="">
+                <form id="contact-form" action="">
                     <div class="footer__form-col-1">
-                        <input type="text" placeholder="Họ Tên*">
-                        <input type="text" placeholder="Email*">
+                        <input id="contact-form-name" name="name" type="text" placeholder="Họ Tên*">
+                        <input id="contact-form-email" name="email" type="email" placeholder="Email*">
                     </div>
                     <div class="footer__form-col-2">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Tin nhắn*"></textarea>
+                        <textarea name="message" id="contact-form-message" cols="30" rows="10"
+                            placeholder="Tin nhắn*"></textarea>
                     </div>
                     <div class="footer__form-col-3">
-                        <button>Gửi</button>
+                        <button id="contact-form-btn">Gửi</button>
                     </div>
                 </form>
             </div>
