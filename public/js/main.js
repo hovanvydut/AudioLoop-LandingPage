@@ -6,6 +6,8 @@ document.getElementById('survey-btn').addEventListener('click', () => {
     document
         .getElementById('survey-embed-cover')
         .classList.remove('survey-embed-cover--hidden');
+
+    document.getElementsByTagName('BODY')[0].style.overflow = 'hidden';
 });
 
 document.getElementById('survey-embed-close').addEventListener('click', () => {
@@ -16,6 +18,8 @@ document.getElementById('survey-embed-close').addEventListener('click', () => {
     document
         .getElementById('survey-embed-cover')
         .classList.add('survey-embed-cover--hidden');
+
+    document.getElementsByTagName('BODY')[0].style.overflow = 'auto';
 });
 
 const headerDownloadBtns = document.getElementsByClassName(
