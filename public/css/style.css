@@ -2,7 +2,6 @@
   box-sizing: border-box; }
 
 body {
-  max-width: 1366px;
   margin: 0 auto; }
 
 /* Spin */
@@ -99,6 +98,9 @@ body {
     height: 0; }
   to {
     height: auto; } }
+#container {
+  max-width: 1920px; }
+
 .notify-popup {
   position: fixed;
   z-index: 10;
@@ -110,9 +112,15 @@ body {
   padding: 30px;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
   color: black;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: 0.5s;
+  opacity: 1; }
   .notify-popup--hidden {
-    display: none; }
+    height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0; }
   .notify-popup-close {
     position: absolute;
     top: 0;
@@ -325,7 +333,7 @@ body {
   .dyk__container .dyk__footer {
     background-color: #ff9a76;
     text-align: center;
-    padding: 47px 0; }
+    padding: 30px 42px; }
     .dyk__container .dyk__footer .dyk__footertext {
       color: white;
       font-size: 20px;
@@ -655,7 +663,7 @@ body {
           line-height: 19px;
           color: white;
           padding: 3px 7px;
-          height: 31px; }
+          height: 42px; }
 
 @media screen and (max-width: 1200px) {
   .header__audio-loop-block {
@@ -683,6 +691,7 @@ body {
     margin-top: 0;
     margin-left: 0;
     padding: 10px;
+    padding-top: 165px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -749,6 +758,18 @@ body {
   .survey-embed-cover--hidden {
     display: none; }
 
+.modal-cover1 {
+  position: fixed;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9; }
+  .modal-cover1--hidden {
+    display: none; }
+
 @media screen and (max-width: 500px) {
   .notify-popup {
     width: 90vw;
@@ -780,10 +801,18 @@ body {
           padding: 0 3px; }
           .header__container .header__audio-loop-block .header__button-container .header__download-btn img {
             margin: 0; }
+          .header__container .header__audio-loop-block .header__button-container .header__download-btn p {
+            font-size: 14px; }
 
+  .dyk__container .dyk__head .dyk__title {
+    margin-top: 60px; }
+  .dyk__container .dyk__card-container {
+    margin: 26px 42px 60px 42px; }
   .dyk__container .dyk__footer .dyk__footertext {
     font-size: 16px; }
 
+  .mf__container .mf__head .mf__title {
+    margin-top: 60px; }
   .mf__container .mf__row .mf__img {
     flex-basis: 100%;
     margin-bottom: 30px; }
@@ -796,6 +825,13 @@ body {
       width: 100%; }
       .mf__container .mf__row .mf__text .mf__text-wrapper .mf__feature-name {
         font-size: 28px; }
+
+  .of__container {
+    padding-bottom: 60px; }
+    .of__container .of__head .of__title {
+      margin-top: 60px; }
+    .of__container .of__card-container {
+      margin-top: 26px; }
 
   .ba__container {
     background-image: url("../images/background_2.png");
@@ -820,7 +856,7 @@ body {
         font-weight: 300; }
 
   .me__container {
-    padding: 150px 10px; }
+    padding: 60px 10px; }
     .me__container .survey-container {
       padding: 30px 0px; }
       .me__container .survey-container .survey-button {

@@ -63,13 +63,13 @@ document
     .getElementById('trial-register-form-btn')
     .addEventListener('click', (event) => {
         event.preventDefault();
-        turnOnSpin();
 
         const email = document.getElementById('trial-register-form-input')
             .value;
         if (email == '') {
             alert('Vui lòng điền thông tin đầy đủ!');
-        } else
+        } else {
+            turnOnSpin();
             fetch('https://api.apispreadsheets.com/data/4677/', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -80,7 +80,7 @@ document
                 }),
             }).then((res) => {
                 if (res.status === 201) {
-                    alert('Bạn đã đăng kí dùng thử thành công!');
+                    turnOnModal1();
                     document.getElementById('trial-register-form-input').value =
                         '';
                 } else {
@@ -90,20 +90,22 @@ document
                 turnOffSpin();
                 document.getElementById('notify-popup-close').click();
             });
+        }
     });
 
 document
     .getElementById('contact-form-btn')
     .addEventListener('click', (event) => {
         event.preventDefault();
-        turnOnSpin();
         const email = document.getElementById('contact-form-email').value;
         const name = document.getElementById('contact-form-name').value;
         const message = document.getElementById('contact-form-message').value;
 
         if (email == '' || name == '' || message == '') {
             alert('Vui lòng điền thông tin đầy đủ!');
-        } else
+        } else {
+            turnOnSpin();
+
             fetch('https://api.apispreadsheets.com/data/4684/', {
                 method: 'POST',
                 body: JSON.stringify({
@@ -116,9 +118,7 @@ document
                 }),
             }).then((res) => {
                 if (res.status === 201) {
-                    alert(
-                        'Chúng tôi đã nhận được tin nhắn, sớm sẽ phản hồi với bạn'
-                    );
+                    turnOnModal1();
                     document.getElementById('contact-form-email').value = '';
                     document.getElementById('contact-form-name').value = '';
                     document.getElementById('contact-form-message').value = '';
@@ -127,15 +127,17 @@ document
                 }
                 turnOffSpin();
             });
+        }
     });
 
 document.getElementById('notify-modal-1-btn').addEventListener('click', () => {
-    document
-        .getElementById('notify-modal-1')
-        .classList.add('notify-modal--hidden');
+    turnOffModal1();
 });
 
+// MODAL 1
+
 function turnOnModal1() {
+    turnOnSurveyCover();
     document
         .getElementById('notify-modal-1')
         .classList.remove('notify-modal--hidden');
@@ -145,8 +147,11 @@ function turnOffModal1() {
     document
         .getElementById('notify-modal-1')
         .classList.add('notify-modal--hidden');
+
+    turnOffSurveyCover();
 }
 
+// SPIN
 function turnOnSpin() {
     const elm = document.getElementsByClassName('cover-spin')[0];
     elm.classList.add('cover-spin--show');
@@ -155,4 +160,17 @@ function turnOnSpin() {
 function turnOffSpin() {
     const elm = document.getElementsByClassName('cover-spin')[0];
     elm.classList.remove('cover-spin--show');
+}
+
+// survey embed cover
+function turnOnSurveyCover() {
+    document
+        .getElementById('modal-cover1')
+        .classList.remove('modal-cover1--hidden');
+}
+
+function turnOffSurveyCover() {
+    document
+        .getElementById('modal-cover1')
+        .classList.add('modal-cover1--hidden');
 }
