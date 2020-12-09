@@ -561,7 +561,7 @@ body {
         opacity: 0;
         display: flex;
         justify-content: center; }
-        .me__container .me__card-container .me__card .me__card-action .me__card-icon:nth-child(2n + 1) {
+        .me__container .me__card-container .me__card .me__card-action a .me__card-icon:nth-child(2n + 1) {
           margin-right: 15px; }
 
 .survey-container {
@@ -838,7 +838,7 @@ body {
     background-image: url("../images/background_2.png");
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-size: cover;
     background-position: center;
@@ -850,11 +850,13 @@ body {
         color: white;
         font-size: 24px;
         font-weight: 800;
-        margin-bottom: 14px; }
+        margin-bottom: 14px;
+        text-align: center; }
       .ba__container .ba__text-block .ba__description {
         color: white;
         font-size: 16px;
-        font-weight: 300; }
+        font-weight: 300;
+        text-align: center; }
 
   .me__container {
     padding: 60px 10px; }

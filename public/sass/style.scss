@@ -790,9 +790,11 @@ body {
                 display: flex;
                 justify-content: center;
 
-                .me__card-icon {
-                    &:nth-child(2n + 1) {
-                        margin-right: 15px;
+                a {
+                    .me__card-icon {
+                        &:nth-child(2n + 1) {
+                            margin-right: 15px;
+                        }
                     }
                 }
             }
@@ -1292,7 +1294,7 @@ body {
         background-image: url('../images/background_2.png');
         width: 100%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         background-size: cover;
         background-position: center;
@@ -1306,12 +1308,14 @@ body {
                 font-size: 24px;
                 font-weight: $ExtraBold;
                 margin-bottom: 14px;
+                text-align: center;
             }
 
             .ba__description {
                 color: white;
                 font-size: 16px;
                 font-weight: $Light;
+                text-align: center;
             }
         }
     }
