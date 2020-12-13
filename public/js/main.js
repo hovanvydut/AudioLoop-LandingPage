@@ -68,6 +68,8 @@ document
             .value;
         if (email == '') {
             alert('Vui lòng điền thông tin đầy đủ!');
+        } else if (!validateEmail(email)) {
+            alert('Vui lòng nhập đúng định dạng email!');
         } else {
             turnOnSpin();
             fetch('https://api.apispreadsheets.com/data/4677/', {
@@ -103,6 +105,8 @@ document
 
         if (email == '' || name == '' || message == '') {
             alert('Vui lòng điền thông tin đầy đủ!');
+        } else if (!validateEmail(email)) {
+            alert('Vui lòng nhập đúng định dạng email!');
         } else {
             turnOnSpin();
 
@@ -173,4 +177,9 @@ function turnOffSurveyCover() {
     document
         .getElementById('modal-cover1')
         .classList.add('modal-cover1--hidden');
+}
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 }
