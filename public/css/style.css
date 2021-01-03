@@ -248,10 +248,9 @@ body {
     opacity: 0.3; }
   .header__container .header__audio-loop-block {
     position: absolute;
-    width: calc((500 / 1366) * 100%);
-    height: calc((318 / 765) * 100%);
-    margin-left: calc((103 / 1366) * 100%);
-    margin-top: calc((186 / 1366) * 100%);
+    transform: translate(0, -50%);
+    left: calc((103 / 1366) * 100%);
+    top: 50%;
     z-index: 3; }
     .header__container .header__audio-loop-block h1 {
       color: white;
