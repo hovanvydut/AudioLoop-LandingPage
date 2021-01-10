@@ -682,7 +682,9 @@ body {
 
     .ba__text-block {
         position: absolute;
-        top: calc(122 / 765 * 100%);
+        // top: calc(122 / 765 * 100%);
+        top: 50%;
+        transform: translate(0, -50%);
         right: calc(105 / 1366 * 100%);
 
         .ba__title {
@@ -946,133 +948,6 @@ body {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .header__audio-loop-block {
-        width: 50%;
-    }
-
-    .header__download-btn {
-        width: auto;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .header__container {
-        .header__overlay {
-        }
-
-        .header__audio-loop-block {
-            width: 70%;
-
-            h1 {
-            }
-
-            p {
-            }
-
-            .header__button-container {
-                .header__download-btn {
-                    width: auto;
-                    padding: 0px 15px;
-                    img {
-                        margin: 0px 10px 0px 0px;
-                    }
-                    p {
-                        span {
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .survey-container {
-        .survey-button {
-            width: 50%;
-        }
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .notify-popup {
-        &-form {
-            form {
-                input {
-                    width: 80%;
-                }
-            }
-        }
-    }
-    .header__container {
-        .header__overlay {
-        }
-
-        .header__audio-loop-block {
-            width: 100%;
-            margin-top: 0;
-            margin-left: 0;
-            padding: 10px;
-            padding-top: 165px;
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            h1 {
-                font-size: 60px;
-            }
-
-            p {
-            }
-
-            .header__button-container {
-                .header__download-btn {
-                    width: auto;
-                    padding: 0px 15px;
-                    img {
-                        margin: 0px 10px 0px 0px;
-                    }
-                    p {
-                        span {
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .survey-container {
-        padding: 30px;
-    }
-
-    .survey-embed {
-        .survey-cover {
-            iframe {
-                width: 100%;
-            }
-        }
-    }
-
-    .footer__app-name {
-        text-align: center;
-    }
-
-    .footer__app-description {
-        width: 100% !important;
-        text-align: center;
-        margin: 20px 0px;
-    }
-
-    .footer__trademark {
-        display: flex;
-
-        img {
-            margin: 0 auto;
-        }
-    }
-}
-
 .survey-embed {
     position: fixed;
     top: 0;
@@ -1138,6 +1013,197 @@ body {
     }
 }
 
+// responsive
+@media screen and (max-width: 1200px) {
+    .header__audio-loop-block {
+        width: 50%;
+    }
+
+    .header__download-btn {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header__container {
+        .header__overlay {
+        }
+
+        .header__audio-loop-block {
+            width: 70%;
+
+            h1 {
+            }
+
+            p {
+            }
+
+            .header__button-container {
+                .header__download-btn {
+                    width: auto;
+                    padding: 0px 15px;
+                    img {
+                        margin: 0px 10px 0px 0px;
+                    }
+                    p {
+                        span {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .survey-container {
+        .survey-button {
+            width: 50%;
+        }
+    }
+}
+
+// responsive
+@media screen and (max-width: 800px) {
+    .notify-popup {
+        &-form {
+            form {
+                input {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .header__container {
+        .header__overlay {
+        }
+
+        .header__audio-loop-block {
+            width: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            padding: 10px;
+            padding-top: 165px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+            }
+
+            .header__button-container {
+                .header__download-btn {
+                    width: auto;
+                    padding: 0px 15px;
+                    img {
+                        margin: 0px 10px 0px 0px;
+                    }
+                    p {
+                        span {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ba__container {
+        .ba__text-block {
+            .ba__title {
+                font-size: 50px;
+            }
+            .ba__description {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .survey-container {
+        padding: 30px;
+    }
+
+    .survey-embed {
+        .survey-cover {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+    
+    .footer {
+        padding: 33px 10px;
+    }
+
+    .footer__app-name {
+        text-align: center;
+    }
+
+    .footer__app-description {
+        width: 100% !important;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    
+
+    .footer {
+        .footer__left {
+            .footer__app-description {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            .footer__trademark {
+                display: flex;
+
+                a {
+                    display: block;
+                    width: 100%;
+
+                    img {
+                        margin: 0 auto;
+                        transform: scale(0.7);
+                        width: 100%;
+                        display: block;
+                    }
+                }  
+            }
+        }
+        .footer__right {
+            .footer__contact {
+                .footer__contact-description {
+                    font-size: 16px;
+                }
+            }
+            form {
+                flex-direction: column;
+    
+                .footer__form-col-1 {
+                    width: 100%;
+                    input {
+                        margin-bottom: 10px;
+                    }
+                }
+    
+                .footer__form-col-2 {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    background-color: white;
+                }
+    
+                .footer__form-col-3 {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+// responsive
 @media screen and (max-width: 500px) {
     .notify-popup {
         width: 90vw;
@@ -1180,7 +1246,7 @@ body {
                 justify-content: space-around;
 
                 .header__download-btn {
-                    flex-basis: 45%;
+                    // flex-basis: 45%;
                     margin-right: 0;
                     padding: 0 3px;
 
@@ -1301,10 +1367,10 @@ body {
         align-items: center;
         background-size: cover;
         background-position: center;
-        height: 100vw;
+        // height: 100vw;
 
         .ba__text-block {
-            position: static;
+            // position: static;
             width: 80%;
             .ba__title {
                 color: white;
@@ -1361,6 +1427,15 @@ body {
         .footer__right {
             width: 100%;
 
+            .footer__contact {
+                .footer__contact-description {
+                    text-align: center;
+                }
+                .footer__contact-title {
+                    text-align: center;
+                }
+            }
+
             form {
                 div {
                     margin-bottom: 30px;
@@ -1381,6 +1456,18 @@ body {
 
                 .footer__form-col-3 {
                     width: 100%;
+                }
+            }
+        }
+
+        .footer__trademark {
+            a {
+                display: block;
+                width: 100%;
+
+                img {
+                    display: block;
+                    transform: scale(0.5);
                 }
             }
         }

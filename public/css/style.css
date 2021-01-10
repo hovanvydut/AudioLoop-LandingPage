@@ -481,7 +481,8 @@ body {
   height: 37vw; }
   .ba__container .ba__text-block {
     position: absolute;
-    top: calc(122 / 765 * 100%);
+    top: 50%;
+    transform: translate(0, -50%);
     right: calc(105 / 1366 * 100%); }
     .ba__container .ba__text-block .ba__title {
       color: white;
@@ -665,63 +666,6 @@ body {
           padding: 3px 7px;
           height: 42px; }
 
-@media screen and (max-width: 1200px) {
-  .header__audio-loop-block {
-    width: 50%; }
-
-  .header__download-btn {
-    width: auto; } }
-@media screen and (max-width: 1024px) {
-  .header__container .header__audio-loop-block {
-    width: 70%; }
-    .header__container .header__audio-loop-block .header__button-container .header__download-btn {
-      width: auto;
-      padding: 0px 15px; }
-      .header__container .header__audio-loop-block .header__button-container .header__download-btn img {
-        margin: 0px 10px 0px 0px; }
-
-  .survey-container .survey-button {
-    width: 50%; } }
-@media screen and (max-width: 800px) {
-  .notify-popup-form form input {
-    width: 80%; }
-
-  .header__container .header__audio-loop-block {
-    width: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    padding: 10px;
-    padding-top: 165px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .header__container .header__audio-loop-block h1 {
-      font-size: 60px; }
-    .header__container .header__audio-loop-block .header__button-container .header__download-btn {
-      width: auto;
-      padding: 0px 15px; }
-      .header__container .header__audio-loop-block .header__button-container .header__download-btn img {
-        margin: 0px 10px 0px 0px; }
-
-  .survey-container {
-    padding: 30px; }
-
-  .survey-embed .survey-cover iframe {
-    width: 100%; }
-
-  .footer__app-name {
-    text-align: center; }
-
-  .footer__app-description {
-    width: 100% !important;
-    text-align: center;
-    margin: 20px 0px; }
-
-  .footer__trademark {
-    display: flex; }
-    .footer__trademark img {
-      margin: 0 auto; } }
 .survey-embed {
   position: fixed;
   top: 0;
@@ -770,6 +714,95 @@ body {
   .modal-cover1--hidden {
     display: none; }
 
+@media screen and (max-width: 1200px) {
+  .header__audio-loop-block {
+    width: 50%; }
+
+  .header__download-btn {
+    width: auto; } }
+@media screen and (max-width: 1024px) {
+  .header__container .header__audio-loop-block {
+    width: 70%; }
+    .header__container .header__audio-loop-block .header__button-container .header__download-btn {
+      width: auto;
+      padding: 0px 15px; }
+      .header__container .header__audio-loop-block .header__button-container .header__download-btn img {
+        margin: 0px 10px 0px 0px; }
+
+  .survey-container .survey-button {
+    width: 50%; } }
+@media screen and (max-width: 800px) {
+  .notify-popup-form form input {
+    width: 80%; }
+
+  .header__container .header__audio-loop-block {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 10px;
+    padding-top: 165px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .header__container .header__audio-loop-block h1 {
+      font-size: 60px; }
+    .header__container .header__audio-loop-block .header__button-container .header__download-btn {
+      width: auto;
+      padding: 0px 15px; }
+      .header__container .header__audio-loop-block .header__button-container .header__download-btn img {
+        margin: 0px 10px 0px 0px; }
+
+  .ba__container .ba__text-block .ba__title {
+    font-size: 50px; }
+  .ba__container .ba__text-block .ba__description {
+    font-size: 20px; }
+
+  .survey-container {
+    padding: 30px; }
+
+  .survey-embed .survey-cover iframe {
+    width: 100%; }
+
+  .footer {
+    padding: 33px 10px; }
+
+  .footer__app-name {
+    text-align: center; }
+
+  .footer__app-description {
+    width: 100% !important;
+    text-align: center;
+    margin: 20px 0px; }
+
+  .footer .footer__left .footer__app-description {
+    font-size: 16px;
+    padding: 0 10px; }
+  .footer .footer__left .footer__trademark {
+    display: flex; }
+    .footer .footer__left .footer__trademark a {
+      display: block;
+      width: 100%; }
+      .footer .footer__left .footer__trademark a img {
+        margin: 0 auto;
+        transform: scale(0.7);
+        width: 100%;
+        display: block; }
+  .footer .footer__right .footer__contact .footer__contact-description {
+    font-size: 16px; }
+  .footer .footer__right form {
+    flex-direction: column; }
+    .footer .footer__right form .footer__form-col-1 {
+      width: 100%; }
+      .footer .footer__right form .footer__form-col-1 input {
+        margin-bottom: 10px; }
+    .footer .footer__right form .footer__form-col-2 {
+      width: 100%;
+      margin-bottom: 10px;
+      background-color: white; }
+    .footer .footer__right form .footer__form-col-3 {
+      width: 100%;
+      margin-bottom: 10px; } }
 @media screen and (max-width: 500px) {
   .notify-popup {
     width: 90vw;
@@ -796,7 +829,6 @@ body {
       .header__container .header__audio-loop-block .header__button-container {
         justify-content: space-around; }
         .header__container .header__audio-loop-block .header__button-container .header__download-btn {
-          flex-basis: 45%;
           margin-right: 0;
           padding: 0 3px; }
           .header__container .header__audio-loop-block .header__button-container .header__download-btn img {
@@ -840,10 +872,8 @@ body {
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background-position: center;
-    height: 100vw; }
+    background-position: center; }
     .ba__container .ba__text-block {
-      position: static;
       width: 80%; }
       .ba__container .ba__text-block .ba__title {
         color: white;
@@ -873,6 +903,10 @@ body {
         width: 100%; }
     .footer .footer__right {
       width: 100%; }
+      .footer .footer__right .footer__contact .footer__contact-description {
+        text-align: center; }
+      .footer .footer__right .footer__contact .footer__contact-title {
+        text-align: center; }
       .footer .footer__right form div {
         margin-bottom: 30px; }
       .footer .footer__right form .footer__form-col-1 {
@@ -883,6 +917,12 @@ body {
       .footer .footer__right form .footer__form-col-2 {
         width: 100%; }
       .footer .footer__right form .footer__form-col-3 {
-        width: 100%; } }
+        width: 100%; }
+    .footer .footer__trademark a {
+      display: block;
+      width: 100%; }
+      .footer .footer__trademark a img {
+        display: block;
+        transform: scale(0.5); } }
 
 /*# sourceMappingURL=style.css.map */
